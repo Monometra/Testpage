@@ -1,0 +1,666 @@
+/* ===================================
+   KARIO Media - Pages Styles
+   Add, Report, Help, and Settings pages
+   =================================== */
+
+/* ===== FORM ACTIONS ===== */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: none;
+  text-decoration: none;
+  gap: 8px;
+}
+
+.btn-primary {
+  background-color: #ff6b1a;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #e55a0a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.btn-secondary:hover {
+  background-color: #e5e7eb;
+}
+
+/* ===== ADD INDICATOR PAGE ===== */
+.add-form-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-row {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-group.large {
+  flex: 2;
+  min-width: 300px;
+}
+
+.form-group.small {
+  flex: 0.5;
+  min-width: 100px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  font-size: 1rem;
+  transition: all 0.15s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ff6b1a;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 107, 26, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+  min-width: 200px;
+}
+
+/* ===== REPORT PAGE ===== */
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.report-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.15s ease;
+}
+
+.report-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.report-card.wide {
+  grid-column: span 2;
+}
+
+.report-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+/* Chart Bars */
+.chart-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bar-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.bar-label {
+  width: 100px;
+  font-size: 0.875rem;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.bar-track {
+  flex: 1;
+  height: 12px;
+  background-color: #f3f4f6;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: #ff6b1a;
+  border-radius: 9999px;
+  transition: width 1s ease-out;
+  animation: barGrow 1s ease-out forwards;
+  transform-origin: left;
+}
+
+@keyframes barGrow {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.bar-fill.green {
+  background-color: #22c55e;
+}
+
+.bar-fill.orange {
+  background-color: #f59e0b;
+}
+
+.bar-fill.red {
+  background-color: #ef4444;
+}
+
+.bar-value {
+  width: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  text-align: right;
+}
+
+/* Summary Stats */
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 12px;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.stat-number.green {
+  color: #22c55e;
+}
+
+.stat-number.orange {
+  color: #f59e0b;
+}
+
+.stat-number.red {
+  color: #ef4444;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Category Distribution */
+.category-distribution {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 200px;
+  padding-top: 24px;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.category-visual {
+  width: 60px;
+  height: 150px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.category-bar {
+  width: 100%;
+  background: #ff6b1a;
+  border-radius: 8px 8px 0 0;
+  transition: height 1s ease-out;
+  animation: categoryGrow 1s ease-out forwards;
+  transform-origin: bottom;
+}
+
+@keyframes categoryGrow {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.category-bar.green {
+  background: #22c55e;
+}
+
+.category-item span {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.category-count {
+  font-weight: 700;
+  color: #111827 !important;
+}
+
+/* ===== HELP PAGE ===== */
+.help-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.faq-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.15s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(255, 107, 26, 0.3);
+}
+
+.faq-item[open] {
+  border-color: #ff6b1a;
+  box-shadow: 0 0 0 3px rgba(255, 107, 26, 0.1);
+}
+
+.faq-item summary {
+  padding: 16px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1f2937;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.15s ease;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #ff6b1a;
+  transition: transform 0.15s ease;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item summary:hover {
+  background-color: #f9fafb;
+}
+
+.faq-item[open] summary {
+  background-color: rgba(255, 107, 26, 0.1);
+  color: #ff6b1a;
+}
+
+.faq-content {
+  padding: 16px 24px;
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.faq-content p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ===== SETTINGS PAGE ===== */
+.settings-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+/* Settings Profile */
+.settings-profile {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-avatar-large {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.profile-avatar-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.profile-info p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Settings Form */
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.settings-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-section h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+/* Toggle List */
+.toggle-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.toggle-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.toggle-item span {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d1d5db;
+  border-radius: 9999px;
+  transition: all 0.15s ease;
+}
+
+.toggle-slider::before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease;
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  background-color: #ff6b1a;
+}
+
+.toggle-switch input:checked + .toggle-slider::before {
+  transform: translateX(22px);
+}
+
+.toggle-switch input:focus + .toggle-slider {
+  box-shadow: 0 0 0 3px rgba(255, 107, 26, 0.1);
+}
+
+/* ===== RESPONSIVE DESIGN FOR PAGES ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .report-card.wide {
+    grid-column: span 1;
+  }
+
+  .category-distribution {
+    height: 150px;
+  }
+
+  .category-visual {
+    width: 50px;
+    height: 100px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .add-form-card,
+  .help-card,
+  .settings-card {
+    padding: 16px;
+    margin: 0 -8px;
+    border-radius: 12px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form-group,
+  .form-group.large,
+  .form-group.small,
+  .form-group-stack {
+    min-width: 100%;
+  }
+
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report-card {
+    padding: 16px;
+  }
+
+  .summary-stats {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .category-distribution {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 24px;
+  }
+
+  .category-visual {
+    width: 80px;
+    height: 80px;
+  }
+
+  .settings-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-avatar-large {
+    width: 80px;
+    height: 80px;
+  }
+
+  .faq-item summary {
+    padding: 12px 16px;
+    font-size: 0.875rem;
+  }
+
+  .faq-content {
+    padding: 12px 16px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  .toggle-item {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .bar-item {
+    flex-wrap: wrap;
+  }
+
+  .bar-label {
+    width: 100%;
+  }
+
+  .bar-track {
+    flex: 1;
+    min-width: 150px;
+  }
+}
