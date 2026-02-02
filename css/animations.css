@@ -118,7 +118,20 @@
     opacity: 1;
     pointer-events: auto;
   }
-  87%, 88%, 89%, 90%, 91%, 92%, 93%, 94%, 95%, 96%, 97%, 98%, 99%, 100% {
+  87%,
+  88%,
+  89%,
+  90%,
+  91%,
+  92%,
+  93%,
+  94%,
+  95%,
+  96%,
+  97%,
+  98%,
+  99%,
+  100% {
     opacity: 1;
     pointer-events: auto;
   }
@@ -156,34 +169,6 @@
 .screen-dashboard {
   opacity: 0;
 }
-
-.screen-logo-2 {
-  animation: screen-logo-2-anim 8s ease forwards;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-.screen-login {
-  animation: screen-login-anim 8s ease forwards;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-.screen-welcome {
-  opacity: 0;
-}
-
-.screen-logo-3 {
-  opacity: 0;
-}
-
-.screen-dashboard {
-  opacity: 0;
-}
-
-
-
-
 
 /* Force animations to start */
 body {

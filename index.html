@@ -1,5 +1,4 @@
 <!doctype html>
-<<<<<<< HEAD
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -92,17 +91,17 @@
       </div>
     </div>
 
-      <!-- Screen 5: Third Logo (before dashboard) -->
-      <div class="screen screen-logo-3">
-        <div class="screen-bg"></div>
-        <div class="screen-content">
-          <img
-            src="media/icon-kairo.svg"
-            alt="KARIO Logo"
-            class="logo-centered"
-          />
-        </div>
+    <!-- Screen 5: Third Logo (before dashboard) -->
+    <div class="screen screen-logo-3">
+      <div class="screen-bg"></div>
+      <div class="screen-content">
+        <img
+          src="media/icon-kairo.svg"
+          alt="KARIO Logo"
+          class="logo-centered"
+        />
       </div>
+    </div>
 
     <!-- Screen 6: Dashboard -->
     <div class="screen screen-dashboard">
@@ -143,656 +142,653 @@
         <div class="dashboard-card">
           <!-- Top Navigation Bar -->
           <nav class="top-navbar">
-          <div class="nav-left">
-            <label for="nav-add" class="nav-item">
-              <img src="media/add_icon.svg" alt="Añadir" />
-              <span>Añadir</span>
-            </label>
-            <label for="nav-refresh" class="nav-item">
-              <img src="media/refresh-icon.svg" alt="Refrescar" />
-              <span>Refrescar</span>
-            </label>
-            <label for="delete-mode" class="nav-item delete-toggle-label">
-              <img src="media/delete-icon.svg" alt="Eliminar" />
-              <span>Eliminar</span>
-            </label>
-          </div>
-
-          <label for="nav-dashboard" class="nav-logo">
-            <img src="media/icon-kairo.svg" alt="KARIO" />
-          </label>
-
-          <div class="nav-right">
-            <label for="nav-report" class="nav-item">
-              <img src="media/reportar-icon.svg" alt="Reportar" />
-              <span>Reportar</span>
-            </label>
-            <label for="nav-help" class="nav-item">
-              <span class="help-icon">?</span>
-              <span>Ayuda</span>
-            </label>
-            <div class="nav-icons">
-              <label for="nav-settings" class="icon-btn">
-                <img src="media/settings.icon.svg" alt="Settings" />
+            <div class="nav-left">
+              <label for="nav-add" class="nav-item">
+                <img src="media/add_icon.svg" alt="Añadir" />
+                <span>Añadir</span>
               </label>
-              <label
-                for="notifications-toggle"
-                class="icon-btn notifications-btn"
-              >
-                <img src="media/notifications.icon.svg" alt="Notifications" />
-                <span class="notification-badge">3</span>
+              <label for="nav-refresh" class="nav-item">
+                <img src="media/refresh-icon.svg" alt="Refrescar" />
+                <span>Refrescar</span>
               </label>
-              <div class="nav-avatar">
-                <img src="media/pfp.png" alt="Profile" />
+              <label for="delete-mode" class="nav-item delete-toggle-label">
+                <img src="media/delete-icon.svg" alt="Eliminar" />
+                <span>Eliminar</span>
+              </label>
+            </div>
+
+            <label for="nav-dashboard" class="nav-logo">
+              <img src="media/icon-kairo.svg" alt="KARIO" />
+            </label>
+
+            <div class="nav-right">
+              <label for="nav-report" class="nav-item">
+                <img src="media/reportar-icon.svg" alt="Reportar" />
+                <span>Reportar</span>
+              </label>
+              <label for="nav-help" class="nav-item">
+                <span class="help-icon">?</span>
+                <span>Ayuda</span>
+              </label>
+              <div class="nav-icons">
+                <label for="nav-settings" class="icon-btn">
+                  <img src="media/settings.icon.svg" alt="Settings" />
+                </label>
+                <label
+                  for="notifications-toggle"
+                  class="icon-btn notifications-btn"
+                >
+                  <img src="media/notifications.icon.svg" alt="Notifications" />
+                  <span class="notification-badge">3</span>
+                </label>
+                <div class="nav-avatar">
+                  <img src="media/pfp.png" alt="Profile" />
+                </div>
               </div>
             </div>
-          </div>
-        </nav>
+          </nav>
 
-        <!-- Notifications Dropdown -->
-        <div class="notifications-dropdown">
-          <h4>Notificaciones</h4>
-          <ul class="notifications-list">
-            <li class="notification-item unread">
-              <span class="notification-dot success"></span>
-              <div class="notification-content">
-                <p>Nuevo indicador añadido</p>
-                <span class="notification-time">Hace 5 minutos</span>
+          <!-- Notifications Dropdown -->
+          <div class="notifications-dropdown">
+            <h4>Notificaciones</h4>
+            <ul class="notifications-list">
+              <li class="notification-item unread">
+                <span class="notification-dot success"></span>
+                <div class="notification-content">
+                  <p>Nuevo indicador añadido</p>
+                  <span class="notification-time">Hace 5 minutos</span>
+                </div>
+              </li>
+              <li class="notification-item unread">
+                <span class="notification-dot warning"></span>
+                <div class="notification-content">
+                  <p>Cumplimiento bajo en Marketing</p>
+                  <span class="notification-time">Hace 1 hora</span>
+                </div>
+              </li>
+              <li class="notification-item">
+                <span class="notification-dot info"></span>
+                <div class="notification-content">
+                  <p>Reporte mensual disponible</p>
+                  <span class="notification-time">Hace 2 horas</span>
+                </div>
+              </li>
+              <li class="notification-item">
+                <span class="notification-dot success"></span>
+                <div class="notification-content">
+                  <p>Meta alcanzada en Producción</p>
+                  <span class="notification-time">Ayer</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Dashboard Content -->
+          <main class="main-content">
+            <!-- Dashboard Page -->
+            <section class="page page-dashboard">
+              <div class="page-header">
+                <h1>Panel de Indicadores</h1>
+                <p>
+                  Aquí puedes visualizar los indicadores propuestos y añadidos
+                  por tu equipo de trabajo.
+                </p>
               </div>
-            </li>
-            <li class="notification-item unread">
-              <span class="notification-dot warning"></span>
-              <div class="notification-content">
-                <p>Cumplimiento bajo en Marketing</p>
-                <span class="notification-time">Hace 1 hora</span>
+
+              <!-- Refresh Message -->
+              <div class="refresh-message">
+                <span>✓ Indicadores actualizados</span>
               </div>
-            </li>
-            <li class="notification-item">
-              <span class="notification-dot info"></span>
-              <div class="notification-content">
-                <p>Reporte mensual disponible</p>
-                <span class="notification-time">Hace 2 horas</span>
+
+              <div class="indicators-table-wrapper">
+                <table class="indicators-table">
+                  <thead>
+                    <tr>
+                      <th>Indicador</th>
+                      <th>Descripción</th>
+                      <th>Categoría</th>
+                      <th>Fecha de Inicio</th>
+                      <th>Fecha de Terminación</th>
+                      <th>Fórmula</th>
+                      <th>Frecuencia</th>
+                      <th>Cumplimiento</th>
+                      <th>Área</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="indicator-row">
+                      <td>Modelado 3D</td>
+                      <td>Interés por dise........</td>
+                      <td>Baja</td>
+                      <td>12/05/21</td>
+                      <td>12/12/21</td>
+                      <td>Met.Ágil</td>
+                      <td>1/4</td>
+                      <td>
+                        <div class="progress-ring red" data-progress="31">
+                          <span>31%</span>
+                        </div>
+                      </td>
+                      <td><span class="area-tag">Marketing</span></td>
+                      <td class="action-cell">
+                        <img
+                          src="media/move-grab.svg"
+                          alt="Move"
+                          class="action-move"
+                        />
+                        <img
+                          src="media/X-red-icon.png"
+                          alt="Delete"
+                          class="action-delete"
+                        />
+                      </td>
+                    </tr>
+                    <tr class="indicator-row">
+                      <td>Finca Galeón</td>
+                      <td>Diseño de maque.......</td>
+                      <td>Baja</td>
+                      <td>12/04/21</td>
+                      <td>12/05/21</td>
+                      <td>Met.Ágil</td>
+                      <td>1/4</td>
+                      <td>
+                        <div class="progress-ring red" data-progress="25">
+                          <span>25%</span>
+                        </div>
+                      </td>
+                      <td><span class="area-tag">Diseño</span></td>
+                      <td class="action-cell">
+                        <img
+                          src="media/move-grab.svg"
+                          alt="Move"
+                          class="action-move"
+                        />
+                        <img
+                          src="media/X-red-icon.png"
+                          alt="Delete"
+                          class="action-delete"
+                        />
+                      </td>
+                    </tr>
+                    <tr class="indicator-row">
+                      <td>Colegios Privados</td>
+                      <td>Se busca llegar a los....</td>
+                      <td>Media</td>
+                      <td>24/04/21</td>
+                      <td>12/11/21</td>
+                      <td>Met.Fibo</td>
+                      <td>1/4</td>
+                      <td>
+                        <div class="progress-ring green" data-progress="80">
+                          <span>80%</span>
+                        </div>
+                      </td>
+                      <td><span class="area-tag">Developers</span></td>
+                      <td class="action-cell">
+                        <img
+                          src="media/move-grab.svg"
+                          alt="Move"
+                          class="action-move"
+                        />
+                        <img
+                          src="media/X-red-icon.png"
+                          alt="Delete"
+                          class="action-delete"
+                        />
+                      </td>
+                    </tr>
+                    <tr class="indicator-row">
+                      <td>Electrodomésticos</td>
+                      <td>Ventas de electro......</td>
+                      <td>Media</td>
+                      <td>12/04/21</td>
+                      <td>12/09/21</td>
+                      <td>N/A</td>
+                      <td>1/3</td>
+                      <td>
+                        <div class="progress-ring red" data-progress="32">
+                          <span>32%</span>
+                        </div>
+                      </td>
+                      <td><span class="area-tag">Gerencia</span></td>
+                      <td class="action-cell">
+                        <img
+                          src="media/move-grab.svg"
+                          alt="Move"
+                          class="action-move"
+                        />
+                        <img
+                          src="media/X-red-icon.png"
+                          alt="Delete"
+                          class="action-delete"
+                        />
+                      </td>
+                    </tr>
+                    <tr class="indicator-row">
+                      <td>Estrato 2 - Floridablanca</td>
+                      <td>Impacto en los sec.....</td>
+                      <td>Alta</td>
+                      <td>12/04/21</td>
+                      <td>12/09/21</td>
+                      <td>Met.Expo</td>
+                      <td>1/4</td>
+                      <td>
+                        <div class="progress-ring green" data-progress="95">
+                          <span>95%</span>
+                        </div>
+                      </td>
+                      <td><span class="area-tag">Marketing</span></td>
+                      <td class="action-cell">
+                        <img
+                          src="media/move-grab.svg"
+                          alt="Move"
+                          class="action-move"
+                        />
+                        <img
+                          src="media/X-red-icon.png"
+                          alt="Delete"
+                          class="action-delete"
+                        />
+                      </td>
+                    </tr>
+                    <tr class="indicator-row">
+                      <td>Jóvenes en Acción</td>
+                      <td>Impacto en los sec.....</td>
+                      <td>Alta</td>
+                      <td>15/02/21</td>
+                      <td>09/11/21</td>
+                      <td>Met.Expo</td>
+                      <td>1/2</td>
+                      <td>
+                        <div class="progress-ring orange" data-progress="75">
+                          <span>75%</span>
+                        </div>
+                      </td>
+                      <td><span class="area-tag">Producción</span></td>
+                      <td class="action-cell">
+                        <img
+                          src="media/move-grab.svg"
+                          alt="Move"
+                          class="action-move"
+                        />
+                        <img
+                          src="media/X-red-icon.png"
+                          alt="Delete"
+                          class="action-delete"
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-            </li>
-            <li class="notification-item">
-              <span class="notification-dot success"></span>
-              <div class="notification-content">
-                <p>Meta alcanzada en Producción</p>
-                <span class="notification-time">Ayer</span>
+
+              <label for="nav-add" class="add-elements-btn">
+                Añadir Elementos
+              </label>
+            </section>
+
+            <!-- Add Indicator Page -->
+            <section class="page page-add">
+              <div class="page-header">
+                <h1>Añadir indicadores</h1>
               </div>
-            </li>
-          </ul>
+
+              <div class="add-form-card">
+                <form class="add-form">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>Indicador</label>
+                      <input type="text" placeholder="" />
+                    </div>
+                    <div class="form-group">
+                      <label>Categoría</label>
+                      <input type="text" placeholder="" />
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group large">
+                      <label>Descripción</label>
+                      <textarea rows="4" placeholder=""></textarea>
+                    </div>
+                    <div class="form-group-stack">
+                      <div class="form-group">
+                        <label>Fecha De Inicio</label>
+                        <input type="text" placeholder="" />
+                      </div>
+                      <div class="form-group">
+                        <label>Fecha De Terminación</label>
+                        <input type="text" placeholder="" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>Fórmula</label>
+                      <input type="text" placeholder="" />
+                    </div>
+                    <div class="form-group small">
+                      <label>Frecuencia</label>
+                      <input type="text" placeholder="" />
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>Área</label>
+                      <input type="text" placeholder="" />
+                    </div>
+                  </div>
+
+                  <div class="form-actions">
+                    <label for="nav-dashboard" class="btn btn-primary"
+                      >Añadir</label
+                    >
+                  </div>
+                </form>
+              </div>
+            </section>
+
+            <!-- Report Page -->
+            <section class="page page-report">
+              <div class="page-header">
+                <h1>Reportar</h1>
+                <p>Visualiza el rendimiento de tus indicadores</p>
+              </div>
+
+              <div class="report-grid">
+                <div class="report-card">
+                  <h3>Cumplimiento por Área</h3>
+                  <div class="chart-bars">
+                    <div class="bar-item">
+                      <span class="bar-label">Marketing</span>
+                      <div class="bar-track">
+                        <div class="bar-fill" style="width: 63%"></div>
+                      </div>
+                      <span class="bar-value">63%</span>
+                    </div>
+                    <div class="bar-item">
+                      <span class="bar-label">Diseño</span>
+                      <div class="bar-track">
+                        <div class="bar-fill" style="width: 25%"></div>
+                      </div>
+                      <span class="bar-value">25%</span>
+                    </div>
+                    <div class="bar-item">
+                      <span class="bar-label">Developers</span>
+                      <div class="bar-track">
+                        <div class="bar-fill green" style="width: 80%"></div>
+                      </div>
+                      <span class="bar-value">80%</span>
+                    </div>
+                    <div class="bar-item">
+                      <span class="bar-label">Gerencia</span>
+                      <div class="bar-track">
+                        <div class="bar-fill" style="width: 32%"></div>
+                      </div>
+                      <span class="bar-value">32%</span>
+                    </div>
+                    <div class="bar-item">
+                      <span class="bar-label">Producción</span>
+                      <div class="bar-track">
+                        <div class="bar-fill orange" style="width: 75%"></div>
+                      </div>
+                      <span class="bar-value">75%</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="report-card">
+                  <h3>Resumen General</h3>
+                  <div class="summary-stats">
+                    <div class="stat-item">
+                      <span class="stat-number">6</span>
+                      <span class="stat-label">Total Indicadores</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-number green">2</span>
+                      <span class="stat-label">En Meta</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-number orange">1</span>
+                      <span class="stat-label">En Progreso</span>
+                    </div>
+                    <div class="stat-item">
+                      <span class="stat-number red">3</span>
+                      <span class="stat-label">Bajo Meta</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="report-card wide">
+                  <h3>Distribución por Categoría</h3>
+                  <div class="category-distribution">
+                    <div class="category-item">
+                      <div class="category-visual">
+                        <div class="category-bar" style="height: 40%"></div>
+                      </div>
+                      <span>Baja</span>
+                      <span class="category-count">2</span>
+                    </div>
+                    <div class="category-item">
+                      <div class="category-visual">
+                        <div class="category-bar" style="height: 40%"></div>
+                      </div>
+                      <span>Media</span>
+                      <span class="category-count">2</span>
+                    </div>
+                    <div class="category-item">
+                      <div class="category-visual">
+                        <div
+                          class="category-bar green"
+                          style="height: 40%"
+                        ></div>
+                      </div>
+                      <span>Alta</span>
+                      <span class="category-count">2</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <label for="nav-dashboard" class="btn btn-secondary"
+                  >Volver al Dashboard</label
+                >
+              </div>
+            </section>
+
+            <!-- Help Page -->
+            <section class="page page-help">
+              <div class="page-header">
+                <h1>Ayuda</h1>
+                <p>Preguntas frecuentes y soporte</p>
+              </div>
+
+              <div class="help-card">
+                <div class="faq-list">
+                  <details class="faq-item">
+                    <summary>¿Cómo añadir un indicador?</summary>
+                    <div class="faq-content">
+                      <p>
+                        Para añadir un nuevo indicador, haz clic en el botón
+                        "Añadir" en la barra de navegación superior o en el
+                        botón "Añadir Elementos" en la parte inferior del panel.
+                        Completa todos los campos del formulario y haz clic en
+                        "Añadir" para guardar el nuevo indicador.
+                      </p>
+                    </div>
+                  </details>
+
+                  <details class="faq-item">
+                    <summary>¿Cómo eliminar un indicador?</summary>
+                    <div class="faq-content">
+                      <p>
+                        Haz clic en el botón "Eliminar" en la barra de
+                        navegación. Esto activará el modo de eliminación y verás
+                        un ícono rojo (X) junto a cada indicador. Haz clic en la
+                        X del indicador que deseas eliminar.
+                      </p>
+                    </div>
+                  </details>
+
+                  <details class="faq-item">
+                    <summary>
+                      ¿Qué significan los colores de cumplimiento?
+                    </summary>
+                    <div class="faq-content">
+                      <p>
+                        <strong>Verde:</strong> El indicador está en meta (75% o
+                        más).<br />
+                        <strong>Naranja:</strong> El indicador está en progreso
+                        (50-74%).<br />
+                        <strong>Rojo:</strong> El indicador está bajo la meta
+                        (menos del 50%).
+                      </p>
+                    </div>
+                  </details>
+
+                  <details class="faq-item">
+                    <summary>¿Cómo generar un reporte?</summary>
+                    <div class="faq-content">
+                      <p>
+                        Haz clic en "Reportar" en la barra de navegación para
+                        acceder a la página de reportes. Aquí encontrarás
+                        gráficos y estadísticas sobre el rendimiento de tus
+                        indicadores.
+                      </p>
+                    </div>
+                  </details>
+
+                  <details class="faq-item">
+                    <summary>¿Cómo contactar soporte técnico?</summary>
+                    <div class="faq-content">
+                      <p>
+                        Puedes contactar a nuestro equipo de soporte técnico
+                        enviando un correo a soporte@kariomedia.com o llamando
+                        al +57 300 123 4567 en horario de oficina (Lunes a
+                        Viernes, 8:00 AM - 6:00 PM).
+                      </p>
+                    </div>
+                  </details>
+
+                  <details class="faq-item">
+                    <summary>¿Cómo cambiar mi contraseña?</summary>
+                    <div class="faq-content">
+                      <p>
+                        Ve a Configuración haciendo clic en el ícono de
+                        engranaje en la esquina superior derecha. Allí
+                        encontrarás la opción para actualizar tu información
+                        personal, incluyendo tu contraseña.
+                      </p>
+                    </div>
+                  </details>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <label for="nav-dashboard" class="btn btn-secondary"
+                  >Volver al Dashboard</label
+                >
+              </div>
+            </section>
+
+            <!-- Settings Page -->
+            <section class="page page-settings">
+              <div class="page-header">
+                <h1>Configuración</h1>
+                <p>Administra tu cuenta y preferencias</p>
+              </div>
+
+              <div class="settings-card">
+                <div class="settings-profile">
+                  <div class="profile-avatar-large">
+                    <img src="media/pfp@2x.png" alt="Profile" />
+                  </div>
+                  <div class="profile-info">
+                    <h3>Pedro Felipe Gómez Bonilla</h3>
+                    <p>Usuario Administrador</p>
+                  </div>
+                </div>
+
+                <form class="settings-form">
+                  <div class="settings-section">
+                    <h4>Información Personal</h4>
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label>Nombre Completo</label>
+                        <input type="text" value="Pedro Felipe Gómez Bonilla" />
+                      </div>
+                      <div class="form-group">
+                        <label>Correo Electrónico</label>
+                        <input
+                          type="email"
+                          value="pedro.gomez@kariomedia.com"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label>Teléfono</label>
+                        <input type="tel" value="+57 300 123 4567" />
+                      </div>
+                      <div class="form-group">
+                        <label>Cargo</label>
+                        <input type="text" value="Administrador" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="settings-section">
+                    <h4>Preferencias</h4>
+                    <div class="toggle-list">
+                      <div class="toggle-item">
+                        <span>Notificaciones por correo</span>
+                        <label class="toggle-switch">
+                          <input type="checkbox" checked />
+                          <span class="toggle-slider"></span>
+                        </label>
+                      </div>
+                      <div class="toggle-item">
+                        <span>Notificaciones push</span>
+                        <label class="toggle-switch">
+                          <input type="checkbox" checked />
+                          <span class="toggle-slider"></span>
+                        </label>
+                      </div>
+                      <div class="toggle-item">
+                        <span>Tema oscuro</span>
+                        <label class="toggle-switch">
+                          <input type="checkbox" />
+                          <span class="toggle-slider"></span>
+                        </label>
+                      </div>
+                      <div class="toggle-item">
+                        <span>Recordatorios de indicadores</span>
+                        <label class="toggle-switch">
+                          <input type="checkbox" checked />
+                          <span class="toggle-slider"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-actions">
+                    <label for="nav-dashboard" class="btn btn-primary"
+                      >Guardar Cambios</label
+                    >
+                    <label for="nav-dashboard" class="btn btn-secondary"
+                      >Cancelar</label
+                    >
+                  </div>
+                </form>
+              </div>
+            </section>
+          </main>
         </div>
-
-        <!-- Dashboard Content -->
-        <main class="main-content">
-          <!-- Dashboard Page -->
-          <section class="page page-dashboard">
-            <div class="page-header">
-              <h1>Panel de Indicadores</h1>
-              <p>
-                Aquí puedes visualizar los indicadores propuestos y añadidos por
-                tu equipo de trabajo.
-              </p>
-            </div>
-
-            <!-- Refresh Message -->
-            <div class="refresh-message">
-              <span>✓ Indicadores actualizados</span>
-            </div>
-
-            <div class="indicators-table-wrapper">
-              <table class="indicators-table">
-                <thead>
-                  <tr>
-                    <th>Indicador</th>
-                    <th>Descripción</th>
-                    <th>Categoría</th>
-                    <th>Fecha de Inicio</th>
-                    <th>Fecha de Terminación</th>
-                    <th>Fórmula</th>
-                    <th>Frecuencia</th>
-                    <th>Cumplimiento</th>
-                    <th>Área</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="indicator-row">
-                    <td>Modelado 3D</td>
-                    <td>Interés por dise........</td>
-                    <td>Baja</td>
-                    <td>12/05/21</td>
-                    <td>12/12/21</td>
-                    <td>Met.Ágil</td>
-                    <td>1/4</td>
-                    <td>
-                      <div class="progress-ring red" data-progress="31">
-                        <span>31%</span>
-                      </div>
-                    </td>
-                    <td><span class="area-tag">Marketing</span></td>
-                    <td class="action-cell">
-                      <img
-                        src="media/move-grab.jpg"
-                        alt="Move"
-                        class="action-move"
-                      />
-                      <img
-                        src="media/X-red-icon.jpg"
-                        alt="Delete"
-                        class="action-delete"
-                      />
-                    </td>
-                  </tr>
-                  <tr class="indicator-row">
-                    <td>Finca Galeón</td>
-                    <td>Diseño de maque.......</td>
-                    <td>Baja</td>
-                    <td>12/04/21</td>
-                    <td>12/05/21</td>
-                    <td>Met.Ágil</td>
-                    <td>1/4</td>
-                    <td>
-                      <div class="progress-ring red" data-progress="25">
-                        <span>25%</span>
-                      </div>
-                    </td>
-                    <td><span class="area-tag">Diseño</span></td>
-                    <td class="action-cell">
-                      <img
-                        src="media/move-grab.jpg"
-                        alt="Move"
-                        class="action-move"
-                      />
-                      <img
-                        src="media/X-red-icon.jpg"
-                        alt="Delete"
-                        class="action-delete"
-                      />
-                    </td>
-                  </tr>
-                  <tr class="indicator-row">
-                    <td>Colegios Privados</td>
-                    <td>Se busca llegar a los....</td>
-                    <td>Media</td>
-                    <td>24/04/21</td>
-                    <td>12/11/21</td>
-                    <td>Met.Fibo</td>
-                    <td>1/4</td>
-                    <td>
-                      <div class="progress-ring green" data-progress="80">
-                        <span>80%</span>
-                      </div>
-                    </td>
-                    <td><span class="area-tag">Developers</span></td>
-                    <td class="action-cell">
-                      <img
-                        src="media/move-grab.jpg"
-                        alt="Move"
-                        class="action-move"
-                      />
-                      <img
-                        src="media/X-red-icon.jpg"
-                        alt="Delete"
-                        class="action-delete"
-                      />
-                    </td>
-                  </tr>
-                  <tr class="indicator-row">
-                    <td>Electrodomésticos</td>
-                    <td>Ventas de electro......</td>
-                    <td>Media</td>
-                    <td>12/04/21</td>
-                    <td>12/09/21</td>
-                    <td>N/A</td>
-                    <td>1/3</td>
-                    <td>
-                      <div class="progress-ring red" data-progress="32">
-                        <span>32%</span>
-                      </div>
-                    </td>
-                    <td><span class="area-tag">Gerencia</span></td>
-                    <td class="action-cell">
-                      <img
-                        src="media/move-grab.jpg"
-                        alt="Move"
-                        class="action-move"
-                      />
-                      <img
-                        src="media/X-red-icon.jpg"
-                        alt="Delete"
-                        class="action-delete"
-                      />
-                    </td>
-                  </tr>
-                  <tr class="indicator-row">
-                    <td>Estrato 2 - Floridablanca</td>
-                    <td>Impacto en los sec.....</td>
-                    <td>Alta</td>
-                    <td>12/04/21</td>
-                    <td>12/09/21</td>
-                    <td>Met.Expo</td>
-                    <td>1/4</td>
-                    <td>
-                      <div class="progress-ring green" data-progress="95">
-                        <span>95%</span>
-                      </div>
-                    </td>
-                    <td><span class="area-tag">Marketing</span></td>
-                    <td class="action-cell">
-                      <img
-                        src="media/move-grab.jpg"
-                        alt="Move"
-                        class="action-move"
-                      />
-                      <img
-                        src="media/X-red-icon.jpg"
-                        alt="Delete"
-                        class="action-delete"
-                      />
-                    </td>
-                  </tr>
-                  <tr class="indicator-row">
-                    <td>Jóvenes en Acción</td>
-                    <td>Impacto en los sec.....</td>
-                    <td>Alta</td>
-                    <td>15/02/21</td>
-                    <td>09/11/21</td>
-                    <td>Met.Expo</td>
-                    <td>1/2</td>
-                    <td>
-                      <div class="progress-ring orange" data-progress="75">
-                        <span>75%</span>
-                      </div>
-                    </td>
-                    <td><span class="area-tag">Producción</span></td>
-                    <td class="action-cell">
-                      <img
-                        src="media/move-grab.jpg"
-                        alt="Move"
-                        class="action-move"
-                      />
-                      <img
-                        src="media/X-red-icon.jpg"
-                        alt="Delete"
-                        class="action-delete"
-                      />
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <label for="nav-add" class="add-elements-btn">
-              Añadir Elementos
-            </label>
-          </section>
-
-          <!-- Add Indicator Page -->
-          <section class="page page-add">
-            <div class="page-header">
-              <h1>Añadir indicadores</h1>
-            </div>
-
-            <div class="add-form-card">
-              <form class="add-form">
-                <div class="form-row">
-                  <div class="form-group">
-                    <label>Indicador</label>
-                    <input type="text" placeholder="" />
-                  </div>
-                  <div class="form-group">
-                    <label>Categoría</label>
-                    <input type="text" placeholder="" />
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group large">
-                    <label>Descripción</label>
-                    <textarea rows="4" placeholder=""></textarea>
-                  </div>
-                  <div class="form-group-stack">
-                    <div class="form-group">
-                      <label>Fecha De Inicio</label>
-                      <input type="text" placeholder="" />
-                    </div>
-                    <div class="form-group">
-                      <label>Fecha De Terminación</label>
-                      <input type="text" placeholder="" />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label>Fórmula</label>
-                    <input type="text" placeholder="" />
-                  </div>
-                  <div class="form-group small">
-                    <label>Frecuencia</label>
-                    <input type="text" placeholder="" />
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label>Área</label>
-                    <input type="text" placeholder="" />
-                  </div>
-                </div>
-
-                <div class="form-actions">
-                  <label for="nav-dashboard" class="btn btn-primary"
-                    >Añadir</label
-                  >
-                </div>
-              </form>
-            </div>
-          </section>
-
-          <!-- Report Page -->
-          <section class="page page-report">
-            <div class="page-header">
-              <h1>Reportar</h1>
-              <p>Visualiza el rendimiento de tus indicadores</p>
-            </div>
-
-            <div class="report-grid">
-              <div class="report-card">
-                <h3>Cumplimiento por Área</h3>
-                <div class="chart-bars">
-                  <div class="bar-item">
-                    <span class="bar-label">Marketing</span>
-                    <div class="bar-track">
-                      <div class="bar-fill" style="width: 63%"></div>
-                    </div>
-                    <span class="bar-value">63%</span>
-                  </div>
-                  <div class="bar-item">
-                    <span class="bar-label">Diseño</span>
-                    <div class="bar-track">
-                      <div class="bar-fill" style="width: 25%"></div>
-                    </div>
-                    <span class="bar-value">25%</span>
-                  </div>
-                  <div class="bar-item">
-                    <span class="bar-label">Developers</span>
-                    <div class="bar-track">
-                      <div class="bar-fill green" style="width: 80%"></div>
-                    </div>
-                    <span class="bar-value">80%</span>
-                  </div>
-                  <div class="bar-item">
-                    <span class="bar-label">Gerencia</span>
-                    <div class="bar-track">
-                      <div class="bar-fill" style="width: 32%"></div>
-                    </div>
-                    <span class="bar-value">32%</span>
-                  </div>
-                  <div class="bar-item">
-                    <span class="bar-label">Producción</span>
-                    <div class="bar-track">
-                      <div class="bar-fill orange" style="width: 75%"></div>
-                    </div>
-                    <span class="bar-value">75%</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="report-card">
-                <h3>Resumen General</h3>
-                <div class="summary-stats">
-                  <div class="stat-item">
-                    <span class="stat-number">6</span>
-                    <span class="stat-label">Total Indicadores</span>
-                  </div>
-                  <div class="stat-item">
-                    <span class="stat-number green">2</span>
-                    <span class="stat-label">En Meta</span>
-                  </div>
-                  <div class="stat-item">
-                    <span class="stat-number orange">1</span>
-                    <span class="stat-label">En Progreso</span>
-                  </div>
-                  <div class="stat-item">
-                    <span class="stat-number red">3</span>
-                    <span class="stat-label">Bajo Meta</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="report-card wide">
-                <h3>Distribución por Categoría</h3>
-                <div class="category-distribution">
-                  <div class="category-item">
-                    <div class="category-visual">
-                      <div class="category-bar" style="height: 40%"></div>
-                    </div>
-                    <span>Baja</span>
-                    <span class="category-count">2</span>
-                  </div>
-                  <div class="category-item">
-                    <div class="category-visual">
-                      <div class="category-bar" style="height: 40%"></div>
-                    </div>
-                    <span>Media</span>
-                    <span class="category-count">2</span>
-                  </div>
-                  <div class="category-item">
-                    <div class="category-visual">
-                      <div class="category-bar green" style="height: 40%"></div>
-                    </div>
-                    <span>Alta</span>
-                    <span class="category-count">2</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-actions">
-              <label for="nav-dashboard" class="btn btn-secondary"
-                >Volver al Dashboard</label
-              >
-            </div>
-          </section>
-
-          <!-- Help Page -->
-          <section class="page page-help">
-            <div class="page-header">
-              <h1>Ayuda</h1>
-              <p>Preguntas frecuentes y soporte</p>
-            </div>
-
-            <div class="help-card">
-              <div class="faq-list">
-                <details class="faq-item">
-                  <summary>¿Cómo añadir un indicador?</summary>
-                  <div class="faq-content">
-                    <p>
-                      Para añadir un nuevo indicador, haz clic en el botón
-                      "Añadir" en la barra de navegación superior o en el botón
-                      "Añadir Elementos" en la parte inferior del panel.
-                      Completa todos los campos del formulario y haz clic en
-                      "Añadir" para guardar el nuevo indicador.
-                    </p>
-                  </div>
-                </details>
-
-                <details class="faq-item">
-                  <summary>¿Cómo eliminar un indicador?</summary>
-                  <div class="faq-content">
-                    <p>
-                      Haz clic en el botón "Eliminar" en la barra de navegación.
-                      Esto activará el modo de eliminación y verás un ícono rojo
-                      (X) junto a cada indicador. Haz clic en la X del indicador
-                      que deseas eliminar.
-                    </p>
-                  </div>
-                </details>
-
-                <details class="faq-item">
-                  <summary>
-                    ¿Qué significan los colores de cumplimiento?
-                  </summary>
-                  <div class="faq-content">
-                    <p>
-                      <strong>Verde:</strong> El indicador está en meta (75% o
-                      más).<br />
-                      <strong>Naranja:</strong> El indicador está en progreso
-                      (50-74%).<br />
-                      <strong>Rojo:</strong> El indicador está bajo la meta
-                      (menos del 50%).
-                    </p>
-                  </div>
-                </details>
-
-                <details class="faq-item">
-                  <summary>¿Cómo generar un reporte?</summary>
-                  <div class="faq-content">
-                    <p>
-                      Haz clic en "Reportar" en la barra de navegación para
-                      acceder a la página de reportes. Aquí encontrarás gráficos
-                      y estadísticas sobre el rendimiento de tus indicadores.
-                    </p>
-                  </div>
-                </details>
-
-                <details class="faq-item">
-                  <summary>¿Cómo contactar soporte técnico?</summary>
-                  <div class="faq-content">
-                    <p>
-                      Puedes contactar a nuestro equipo de soporte técnico
-                      enviando un correo a soporte@kariomedia.com o llamando al
-                      +57 300 123 4567 en horario de oficina (Lunes a Viernes,
-                      8:00 AM - 6:00 PM).
-                    </p>
-                  </div>
-                </details>
-
-                <details class="faq-item">
-                  <summary>¿Cómo cambiar mi contraseña?</summary>
-                  <div class="faq-content">
-                    <p>
-                      Ve a Configuración haciendo clic en el ícono de engranaje
-                      en la esquina superior derecha. Allí encontrarás la opción
-                      para actualizar tu información personal, incluyendo tu
-                      contraseña.
-                    </p>
-                  </div>
-                </details>
-              </div>
-            </div>
-
-            <div class="form-actions">
-              <label for="nav-dashboard" class="btn btn-secondary"
-                >Volver al Dashboard</label
-              >
-            </div>
-          </section>
-
-          <!-- Settings Page -->
-          <section class="page page-settings">
-            <div class="page-header">
-              <h1>Configuración</h1>
-              <p>Administra tu cuenta y preferencias</p>
-            </div>
-
-            <div class="settings-card">
-              <div class="settings-profile">
-                <div class="profile-avatar-large">
-                  <img src="media/pfp@2x.png" alt="Profile" />
-                </div>
-                <div class="profile-info">
-                  <h3>Pedro Felipe Gómez Bonilla</h3>
-                  <p>Usuario Administrador</p>
-                </div>
-              </div>
-
-              <form class="settings-form">
-                <div class="settings-section">
-                  <h4>Información Personal</h4>
-                  <div class="form-row">
-                    <div class="form-group">
-                      <label>Nombre Completo</label>
-                      <input type="text" value="Pedro Felipe Gómez Bonilla" />
-                    </div>
-                    <div class="form-group">
-                      <label>Correo Electrónico</label>
-                      <input type="email" value="pedro.gomez@kariomedia.com" />
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-group">
-                      <label>Teléfono</label>
-                      <input type="tel" value="+57 300 123 4567" />
-                    </div>
-                    <div class="form-group">
-                      <label>Cargo</label>
-                      <input type="text" value="Administrador" />
-                    </div>
-                  </div>
-                </div>
-
-                <div class="settings-section">
-                  <h4>Preferencias</h4>
-                  <div class="toggle-list">
-                    <div class="toggle-item">
-                      <span>Notificaciones por correo</span>
-                      <label class="toggle-switch">
-                        <input type="checkbox" checked />
-                        <span class="toggle-slider"></span>
-                      </label>
-                    </div>
-                    <div class="toggle-item">
-                      <span>Notificaciones push</span>
-                      <label class="toggle-switch">
-                        <input type="checkbox" checked />
-                        <span class="toggle-slider"></span>
-                      </label>
-                    </div>
-                    <div class="toggle-item">
-                      <span>Tema oscuro</span>
-                      <label class="toggle-switch">
-                        <input type="checkbox" />
-                        <span class="toggle-slider"></span>
-                      </label>
-                    </div>
-                    <div class="toggle-item">
-                      <span>Recordatorios de indicadores</span>
-                      <label class="toggle-switch">
-                        <input type="checkbox" checked />
-                        <span class="toggle-slider"></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-actions">
-                  <label for="nav-dashboard" class="btn btn-primary"
-                    >Guardar Cambios</label
-                  >
-                  <label for="nav-dashboard" class="btn btn-secondary"
-                    >Cancelar</label
-                  >
-                </div>
-              </form>
-            </div>
-          </section>
-        </main>
-      </div>
       </div>
     </div>
   </body>
-=======
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <title>KAIRO | Dashboard</title>
-  </head>
-  <body></body>
->>>>>>> 2a29d1d329ac6f21fb556be79168e6eeac2f2af7
 </html>
