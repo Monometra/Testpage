@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 # KARIO Media - Panel Digital
 
-A complete, responsive **pure HTML and CSS** web application that reproduces the KARIO Media interface with animated intro sequence and interactive dashboard.
+A complete, responsive **pure HTML and CSS** web application that reproduces the animation sequences showed in class.
 
 ## Features
 
@@ -84,20 +83,6 @@ CSS `animation-delay` creates the sequential intro:
 .app-container { animation: fadeIn 0.8s ease-out 12s forwards; }
 ```
 
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
 ## Usage
 
 Simply open `index.html` in a web browser. No build process or server required.
-
-## License
-
-© KARIO Media - All Rights Reserved
-=======
-# Testpage
->>>>>>> 2a29d1d329ac6f21fb556be79168e6eeac2f2af7
