@@ -40,6 +40,7 @@ PageTest/
 ├── css/
 │   ├── styles.css      # Base styles, variables, typography
 │   ├── animations.css  # Keyframes and intro sequence
+│   ├── login.css       # Login screen style
 │   ├── dashboard.css   # Navbar, table, dashboard layout
 │   └── pages.css       # Add, Report, Help, Settings pages
 └── media/
