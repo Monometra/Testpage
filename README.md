@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # KARIO Media - Panel Digital
 
 A complete, responsive **pure HTML and CSS** web application that reproduces the KARIO Media interface with animated intro sequence and interactive dashboard.
@@ -97,3 +98,6 @@ Simply open `index.html` in a web browser. No build process or server required.
 ## License
 
 © KARIO Media - All Rights Reserved
+=======
+# Testpage
+>>>>>>> 2a29d1d329ac6f21fb556be79168e6eeac2f2af7
