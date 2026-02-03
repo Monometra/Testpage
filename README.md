@@ -91,3 +91,8 @@ CSS `animation-delay` creates the sequential intro:
 ## Usage
 
 Simply open `index.html` in a web browser. No build process or server required.
+
+## Credits
+
+- **Juan Pablo Beltrán**
+- **Juan José Mora**
