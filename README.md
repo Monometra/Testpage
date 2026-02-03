@@ -61,6 +61,7 @@ PageTest/
     ├── settings.icon.svg       # Gear icon
     ├── move-grab.svg           # Move/grab icon
     ├── move-grab2.svg          # Alt move icon
+    ├── logout.png              # Logout icon
     └── X-red-icon.png          # Red X delete icon
 ```
 
