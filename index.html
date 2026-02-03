@@ -494,109 +494,99 @@
             <!-- Report Page -->
             <section class="page page-report">
               <div class="page-header">
-                <h1>Reportar</h1>
-                <p>Visualiza el rendimiento de tus indicadores</p>
+                <h1>Reportar un Problema</h1>
+                <p>¿Encontraste un error? Ayúdanos a mejorar reportándolo</p>
               </div>
 
-              <div class="report-grid">
-                <div class="report-card">
-                  <h3>Cumplimiento por Área</h3>
-                  <div class="chart-bars">
-                    <div class="bar-item">
-                      <span class="bar-label">Marketing</span>
-                      <div class="bar-track">
-                        <div class="bar-fill" style="width: 63%"></div>
-                      </div>
-                      <span class="bar-value">63%</span>
-                    </div>
-                    <div class="bar-item">
-                      <span class="bar-label">Diseño</span>
-                      <div class="bar-track">
-                        <div class="bar-fill" style="width: 25%"></div>
-                      </div>
-                      <span class="bar-value">25%</span>
-                    </div>
-                    <div class="bar-item">
-                      <span class="bar-label">Developers</span>
-                      <div class="bar-track">
-                        <div class="bar-fill green" style="width: 80%"></div>
-                      </div>
-                      <span class="bar-value">80%</span>
-                    </div>
-                    <div class="bar-item">
-                      <span class="bar-label">Gerencia</span>
-                      <div class="bar-track">
-                        <div class="bar-fill" style="width: 32%"></div>
-                      </div>
-                      <span class="bar-value">32%</span>
-                    </div>
-                    <div class="bar-item">
-                      <span class="bar-label">Producción</span>
-                      <div class="bar-track">
-                        <div class="bar-fill orange" style="width: 75%"></div>
-                      </div>
-                      <span class="bar-value">75%</span>
+              <div class="bug-report-card">
+                <form class="bug-report-form">
+                  <div class="form-row">
+                    <div class="form-group large">
+                      <label>Asunto del Problema</label>
+                      <input
+                        type="text"
+                        placeholder="Describe brevemente el problema"
+                      />
                     </div>
                   </div>
-                </div>
 
-                <div class="report-card">
-                  <h3>Resumen General</h3>
-                  <div class="summary-stats">
-                    <div class="stat-item">
-                      <span class="stat-number">6</span>
-                      <span class="stat-label">Total Indicadores</span>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>Tipo de Problema</label>
+                      <select>
+                        <option value="">Selecciona una opción</option>
+                        <option value="bug">Error de funcionalidad</option>
+                        <option value="ui">Problema de interfaz</option>
+                        <option value="performance">
+                          Problema de rendimiento
+                        </option>
+                        <option value="security">
+                          Vulnerabilidad de seguridad
+                        </option>
+                        <option value="other">Otro</option>
+                      </select>
                     </div>
-                    <div class="stat-item">
-                      <span class="stat-number green">2</span>
-                      <span class="stat-label">En Meta</span>
-                    </div>
-                    <div class="stat-item">
-                      <span class="stat-number orange">1</span>
-                      <span class="stat-label">En Progreso</span>
-                    </div>
-                    <div class="stat-item">
-                      <span class="stat-number red">3</span>
-                      <span class="stat-label">Bajo Meta</span>
+                    <div class="form-group">
+                      <label>Prioridad</label>
+                      <select>
+                        <option value="">Selecciona una opción</option>
+                        <option value="low">Baja</option>
+                        <option value="medium">Media</option>
+                        <option value="high">Alta</option>
+                        <option value="critical">Crítica</option>
+                      </select>
                     </div>
                   </div>
-                </div>
 
-                <div class="report-card wide">
-                  <h3>Distribución por Categoría</h3>
-                  <div class="category-distribution">
-                    <div class="category-item">
-                      <div class="category-visual">
-                        <div class="category-bar" style="height: 40%"></div>
-                      </div>
-                      <span>Baja</span>
-                      <span class="category-count">2</span>
-                    </div>
-                    <div class="category-item">
-                      <div class="category-visual">
-                        <div class="category-bar" style="height: 40%"></div>
-                      </div>
-                      <span>Media</span>
-                      <span class="category-count">2</span>
-                    </div>
-                    <div class="category-item">
-                      <div class="category-visual">
-                        <div
-                          class="category-bar green"
-                          style="height: 40%"
-                        ></div>
-                      </div>
-                      <span>Alta</span>
-                      <span class="category-count">2</span>
+                  <div class="form-row">
+                    <div class="form-group large">
+                      <label>Descripción Detallada</label>
+                      <textarea
+                        rows="6"
+                        placeholder="Describe en detalle el problema encontrado, qué pasos seguiste y qué esperabas que sucediera..."
+                      ></textarea>
                     </div>
                   </div>
-                </div>
-              </div>
 
-              <div class="form-actions">
-                <label for="nav-dashboard" class="btn btn-secondary"
-                  >Volver al Dashboard</label
-                >
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label>Correo Electrónico</label>
+                      <input type="email" placeholder="tu.correo@ejemplo.com" />
+                    </div>
+                    <div class="form-group">
+                      <label>Teléfono (opcional)</label>
+                      <input type="tel" placeholder="+57 300 000 0000" />
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group large">
+                      <label>Información del Sistema</label>
+                      <div class="system-info">
+                        <p>
+                          <strong>Navegador:</strong> Detectado automáticamente
+                        </p>
+                        <p>
+                          <strong>Sistema Operativo:</strong> Detectado
+                          automáticamente
+                        </p>
+                        <p>
+                          <strong>Fecha del Reporte:</strong> Detectado
+                          automáticamente
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-actions">
+                    <label for="nav-dashboard" class="btn btn-primary"
+                      >Enviar Reporte</label
+                    >
+                    <label for="nav-dashboard" class="btn btn-secondary"
+                      >Cancelar</label
+                    >
+                  </div>
+                </form>
               </div>
             </section>
 
