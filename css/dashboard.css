@@ -1,0 +1,826 @@
+/* ===================================
+   KARIO Media - Dashboard Styles
+   Navbar, table, and main layout
+   =================================== */
+
+/* ===== DASHBOARD WRAPPER ===== */
+/* fix: centered single card dashboard layout with stadium background */
+.dashboard-wrapper {
+  position: relative;
+  min-height: 100vh;
+  padding: var(--spacing-xl, 32px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1;
+}
+
+/* ===== DASHBOARD CARD ===== */
+/* fix: single white container holding navbar + table + button */
+.dashboard-card {
+  background: var(--color-white, #ffffff);
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  max-width: 1400px;
+  overflow: hidden;
+}
+
+/* ===== TOP NAVIGATION BAR ===== */
+/* fix: centered logo layout - aligned KARIO logo perfectly in navbar */
+.top-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--color-gray-200, #e5e7eb);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Center Logo */
+/* fix: logo centering using flex order instead of manual positioning */
+.nav-logo {
+  order: 2;
+  cursor: pointer;
+  padding: 4px;
+  transition: transform 0.15s ease;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-logo img {
+  width: 40px;
+  height: auto;
+}
+
+/* Center Logo */
+.nav-logo {
+  cursor: pointer;
+  padding: 4px;
+  transition: transform 0.15s ease;
+  z-index: 10;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+}
+
+.nav-logo img {
+  width: 40px;
+  height: auto;
+}
+
+/* Create a center position for logo */
+.top-navbar::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Nav Items */
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-item:hover {
+  background-color: #f9fafb;
+}
+
+.nav-item img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: transform 0.15s ease;
+}
+
+.nav-item:hover img {
+  transform: scale(1.1);
+}
+
+
+
+.nav-item span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+/* Help Icon (text-based) */
+.help-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #ff6b1a; 
+  color: #ffffff !important;
+  border-radius: 50%;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+/* Center Logo */
+.nav-logo {
+  cursor: pointer;
+  padding: 4px;
+  transition: transform 0.15s ease;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-logo:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
+.nav-logo img {
+  width: 40px;
+  height: auto;
+}
+
+/* Notification Badge */
+.nav-avatar {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.nav-avatar img {
+  width: 35px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Nav Icons (right side) */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 16px;
+  padding-left: 16px;
+  border-left: 1px solid #e5e7eb;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.icon-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.icon-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Notification Badge */
+.notification-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 18px;
+  height: 18px;
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+}
+
+/* Nav Avatar */
+.nav-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #e5e7eb;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.nav-avatar:hover {
+  border-color: #ff6b1a;
+}
+
+.nav-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-logout img {
+  color: #e55a0a;
+  width: 35px;
+  height: 35px;
+}
+
+/* ===== NOTIFICATIONS DROPDOWN ===== */
+.notifications-dropdown {
+  position: fixed;
+  top: 70px;
+  right: 24px;
+  width: 320px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 16px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transform: translateY(-10px);
+}
+
+#notifications-toggle:checked ~ .dashboard-wrapper .dashboard-card .notifications-dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.notifications-dropdown h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.notifications-list {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.notification-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+}
+
+.notification-item:hover {
+  background-color: #f9fafb;
+}
+
+.notification-item.unread {
+  background-color: rgba(255, 107, 26, 0.1);
+}
+
+.notification-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.notification-dot.success {
+  background-color: #22c55e;
+}
+
+.notification-dot.warning {
+  background-color: #f59e0b;
+}
+
+.notification-dot.info {
+  background-color: #3b82f6;
+}
+
+.notification-content p {
+  font-size: 0.875rem;
+  color: #1f2937;
+  margin-bottom: 2px;
+}
+
+.notification-time {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  padding: 32px 24px;
+  overflow-x: auto;
+}
+
+/* ===== PAGE VISIBILITY CONTROL ===== */
+.page {
+  display: none;
+}
+
+/* Default: Show dashboard */
+#nav-dashboard:checked ~ .dashboard-wrapper .dashboard-card .page-dashboard {
+  display: block;
+}
+
+#nav-add:checked ~ .dashboard-wrapper .dashboard-card .page-dashboard,
+#nav-add:checked ~ .dashboard-wrapper .dashboard-card .page-report,
+#nav-add:checked ~ .dashboard-wrapper .dashboard-card .page-help,
+#nav-add:checked ~ .dashboard-wrapper .dashboard-card .page-settings {
+  display: none;
+}
+
+#nav-add:checked ~ .dashboard-wrapper .dashboard-card .page-add {
+  display: block;
+}
+
+#nav-refresh:checked ~ .dashboard-wrapper .dashboard-card .page-dashboard {
+  display: block;
+}
+
+#nav-report:checked ~ .dashboard-wrapper .dashboard-card .page-dashboard,
+#nav-report:checked ~ .dashboard-wrapper .dashboard-card .page-add,
+#nav-report:checked ~ .dashboard-wrapper .dashboard-card .page-help,
+#nav-report:checked ~ .dashboard-wrapper .dashboard-card .page-settings {
+  display: none;
+}
+
+#nav-report:checked ~ .dashboard-wrapper .dashboard-card .page-report {
+  display: block;
+}
+
+#nav-help:checked ~ .dashboard-wrapper .dashboard-card .page-dashboard,
+#nav-help:checked ~ .dashboard-wrapper .dashboard-card .page-add,
+#nav-help:checked ~ .dashboard-wrapper .dashboard-card .page-report,
+#nav-help:checked ~ .dashboard-wrapper .dashboard-card .page-settings {
+  display: none;
+}
+
+#nav-help:checked ~ .dashboard-wrapper .dashboard-card .page-help {
+  display: block;
+}
+
+#nav-settings:checked ~ .dashboard-wrapper .dashboard-card .page-dashboard,
+#nav-settings:checked ~ .dashboard-wrapper .dashboard-card .page-add,
+#nav-settings:checked ~ .dashboard-wrapper .dashboard-card .page-report,
+#nav-settings:checked ~ .dashboard-wrapper .dashboard-card .page-help {
+  display: none;
+}
+
+#nav-settings:checked ~ .dashboard-wrapper .dashboard-card .page-settings {
+  display: block;
+}
+
+/* ===== PAGE HEADER ===== */
+.page-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.page-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* ===== REFRESH MESSAGE ===== */
+.refresh-message {
+  display: none;
+  text-align: center;
+  padding: 16px;
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+#nav-refresh:checked ~ .dashboard-wrapper .refresh-message {
+  display: block;
+  animation:
+    fadeInUp 0.3s ease-out,
+    fadeOut 2s ease-out 2s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* ===== INDICATORS TABLE ===== */
+.indicators-table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 32px;
+}
+
+.indicators-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.indicators-table th,
+.indicators-table td {
+  padding: 16px 8px;
+  text-align: left;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.indicators-table th {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.indicators-table td {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+/* Indicator Row */
+.indicator-row {
+  transition: all 0.15s ease;
+}
+
+.indicator-row:hover {
+  background-color: #f9fafb;
+}
+
+.indicator-row td:first-child {
+  font-weight: 500;
+  color: #111827;
+}
+
+/* ===== PROGRESS RING ===== */
+.progress-ring {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: conic-gradient(
+    var(--ring-color, #ef4444) calc(var(--progress, 0) * 3.6deg),
+    #e5e7eb 0deg
+  );
+  transition: all 0.3s ease;
+}
+
+.progress-ring::before {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.progress-ring span {
+  position: relative;
+  z-index: 1;
+  color: var(--ring-color, #ef4444);
+}
+
+.progress-ring:hover {
+  transform: scale(1.1);
+}
+
+.progress-ring.red {
+  --ring-color: #ef4444;
+  --progress: 31;
+}
+
+.progress-ring.red[data-progress="25"] {
+  --progress: 25;
+}
+
+.progress-ring.red[data-progress="31"] {
+  --progress: 31;
+}
+
+.progress-ring.red[data-progress="32"] {
+  --progress: 32;
+}
+
+.progress-ring.green {
+  --ring-color: #22c55e;
+}
+
+.progress-ring.green[data-progress="80"] {
+  --progress: 80;
+}
+
+.progress-ring.green[data-progress="95"] {
+  --progress: 95;
+}
+
+.progress-ring.orange {
+  --ring-color: #f59e0b;
+}
+
+.progress-ring.orange[data-progress="75"] {
+  --progress: 75;
+}
+
+/* ===== AREA TAG ===== */
+.area-tag {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #f3f4f6;
+  color: #374151;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+/* ===== ACTION CELL ===== */
+.action-cell {
+  width: 40px;
+  text-align: center;
+}
+
+.action-move,
+.action-delete {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+/* Default: Show move icon, hide delete */
+.action-delete {
+  display: none;
+}
+
+.action-move {
+  display: inline-block;
+  opacity: 0.6;
+}
+
+.action-move:hover {
+  opacity: 1;
+}
+
+/* Delete mode: Show delete icon, hide move */
+#delete-mode:checked ~ .dashboard-wrapper .dashboard-card .action-delete {
+  display: inline-block;
+}
+
+#delete-mode:checked ~ .dashboard-wrapper .dashboard-card .action-move {
+  display: none;
+}
+
+#delete-mode:checked ~ .dashboard-wrapper .dashboard-card .indicator-row:hover {
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+#delete-mode:checked ~ .dashboard-wrapper .dashboard-card .action-delete:hover {
+  transform: scale(1.1);
+}
+
+#delete-mode:checked ~ .dashboard-wrapper .dashboard-card .delete-toggle-label {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+#delete-mode:checked ~ .dashboard-wrapper .dashboard-card .delete-toggle-label span {
+  color: #ef4444;
+}
+
+#delete-mode:checked ~ .dashboard-wrapper .action-move {
+  display: none;
+}
+
+#delete-mode:checked ~ .dashboard-wrapper .indicator-row:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+#delete-mode:checked ~ .dashboard-wrapper .action-delete:hover {
+  transform: scale(1.2);
+}
+
+/* Delete mode indicator on navbar */
+#delete-mode:checked ~ .dashboard-wrapper .delete-toggle-label {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+#delete-mode:checked ~ .dashboard-wrapper .delete-toggle-label span {
+  color: #ef4444;
+}
+
+/* ===== ADD ELEMENTS BUTTON ===== */
+.add-elements-btn {
+  display: block;
+  width: fit-content;
+  margin: 32px auto 16px;
+  padding: 16px 48px;
+  background: #ff6b1a;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.add-elements-btn:hover {
+  background: #e55a0a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .top-navbar {
+    padding: 8px;
+  }
+
+  .nav-left,
+  .nav-right {
+    gap: 8px;
+  }
+
+  .nav-item span {
+    display: none;
+  }
+
+  .nav-icons {
+    margin-left: 8px;
+    padding-left: 8px;
+  }
+
+  .main-content {
+    padding: 16px;
+  }
+
+  .dashboard-card {
+    margin: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .dashboard-wrapper {
+    padding: 8px;
+  }
+
+  .top-navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .nav-left,
+  .nav-right {
+    order: 2;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-logo {
+    order: 1;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-icons {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .main-content {
+    padding: 16px 8px;
+  }
+
+  .dashboard-card {
+    margin: 0;
+    border-radius: 12px;
+  }
+
+  .nav-logo {
+    order: 1;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-icons {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .main-content {
+    padding: 16px 8px;
+    border-radius: 12px;
+  }
+
+  .page-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .notifications-dropdown {
+    right: 8px;
+    left: 8px;
+    width: auto;
+  }
+
+  .indicators-table {
+    font-size: 0.75rem;
+  }
+
+  .indicators-table th,
+  .indicators-table td {
+    padding: 8px 4px;
+  }
+
+  .progress-ring {
+    width: 40px;
+    height: 40px;
+  }
+
+  .progress-ring::before {
+    width: 32px;
+    height: 32px;
+  }
+
+  .add-elements-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
