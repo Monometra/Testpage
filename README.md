@@ -92,3 +92,7 @@ CSS `animation-delay` creates the sequential intro:
 ## Usage
 
 Simply open `index.html` in a web browser. No build process or server required.
+
+## Figma layout
+
+[Figma Layout](https://www.figma.com/site/9LDXSUaNd0c6KEXvhYgGYW/KAIRO?node-id=0-1&t=9VIKC95gDHog0wxW-1)
