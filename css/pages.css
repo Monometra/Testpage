@@ -581,6 +581,11 @@
     padding: 16px;
     margin: 0 -8px;
     border-radius: 12px;
+    max-height: calc(100vh - 120px);
+    max-height: calc(100dvh - 120px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
   }
 
   .form-row {
@@ -640,10 +645,17 @@
 
   .form-actions {
     flex-direction: column;
+    position: sticky;
+    bottom: 0;
+    background: var(--color-white);
+    padding: 16px 0 0 0;
+    margin-top: 24px;
+    border-top: 1px solid var(--color-gray-200);
   }
 
   .form-actions .btn {
     width: 100%;
+    -webkit-tap-highlight-color: rgba(255, 107, 26, 0.2);
   }
 
   .toggle-item {

@@ -122,6 +122,9 @@ html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
+  height: 100%;
+  height: 100vh;
+  height: 100dvh;
 }
 
 body {
@@ -134,7 +137,10 @@ body {
     linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
     url("../media/background.png") center/cover fixed no-repeat;
   min-height: 100vh;
+  min-height: 100dvh;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
 }
 
 /* Typography */
@@ -432,12 +438,19 @@ label {
 
   html {
     font-size: 14px;
+    height: 100%;
+    height: 100vh;
+    height: 100dvh;
   }
 
   body {
     background-attachment: scroll;
     min-height: 100vh;
+    min-height: 100dvh;
     min-height: -webkit-fill-available;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
   }
 
   h1 {
@@ -472,6 +485,49 @@ label {
   button,
   .btn {
     min-height: 44px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Mobile scrolling containers */
+  .mobile-scroll-container {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .mobile-scroll-horizontal {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .mobile-scroll-horizontal::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Sticky positioning for mobile */
+  .mobile-sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-white);
+  }
+
+  .mobile-sticky-bottom {
+    position: sticky;
+    bottom: 0;
+    z-index: 100;
+    background: var(--color-white);
+  }
+
+  /* Prevent bounce scrolling on iOS */
+  .no-bounce {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -485,6 +541,17 @@ label {
     --spacing-sm: 6px;
     --spacing-md: 10px;
     --spacing-lg: 14px;
+  }
+
+  /* Additional small device scrolling fixes */
+  .dashboard-card {
+    max-height: calc(100vh - 8px);
+    max-height: calc(100dvh - 8px);
+  }
+
+  .main-content {
+    max-height: calc(100vh - 200px);
+    max-height: calc(100dvh - 200px);
   }
 }
 
@@ -516,6 +583,30 @@ label {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari scrolling improvements */
+  body {
+    -webkit-overflow-scrolling: touch;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+
+  .screen-dashboard {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .dashboard-wrapper {
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
