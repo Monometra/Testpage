@@ -1,0 +1,507 @@
+/* ===================================
+   KARIO Media - Animations CSS
+   fix: login sequence now works - logo → fade → logo → login → welcome → dashboard
+   Screen-based intro sequence
+   =================================== */
+
+/* ===== HIDDEN CHECKBOX ===== */
+.hidden-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+
+/* ===== SCREEN BASE STYLES ===== */
+.screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+.screen-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.85)),
+    url("../media/background.png") center/cover fixed no-repeat;
+  z-index: -1;
+}
+
+.screen-bg-light {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.8)),
+    url("../media/background.png") center/cover fixed no-repeat;
+}
+
+.screen-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* ===== CENTERED LOGO ===== */
+.logo-centered {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 4px 20px rgba(255, 107, 26, 0.4));
+}
+
+/* ===== KEYFRAME ANIMATIONS ===== */
+
+/* Screen 1: First logo - visible from 0s to 2s */
+@keyframes screen-logo-1-anim {
+  0% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  25% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  35% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* Screen 2: Second logo - visible from 3s to 5s */
+@keyframes screen-logo-2-anim {
+  0%,
+  40% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  50% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  70% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  80% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* Screen 3: Login - visible from 6s onwards, stays until checkbox */
+@keyframes screen-login-anim {
+  0%,
+  85% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  86% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  87%,
+  88%,
+  89%,
+  90%,
+  91%,
+  92%,
+  93%,
+  94%,
+  95%,
+  96%,
+  97%,
+  98%,
+  99%,
+  100% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+/* Total auto sequence: 8 seconds */
+/* fix: proper initial states - login screen stays visible until user clicks */
+.screen-logo-1 {
+  animation: screen-logo-1-anim 8s ease forwards;
+  animation-fill-mode: forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.screen-logo-2 {
+  animation: screen-logo-2-anim 8s ease forwards;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.screen-login {
+  animation: screen-login-anim 8s ease forwards;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.screen-welcome {
+  opacity: 0;
+}
+
+.screen-logo-3 {
+  opacity: 0;
+}
+
+.screen-dashboard {
+  opacity: 0;
+}
+
+/* Force animations to start */
+body {
+  animation: none !important;
+}
+
+.screen {
+  animation-fill-mode: forwards !important;
+}
+
+/* Logo pulse animation */
+@keyframes logo-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.screen-logo-1 .logo-centered,
+.screen-logo-2 .logo-centered,
+.screen-logo-3 .logo-centered {
+  animation: logo-pulse 2s ease-in-out infinite;
+}
+
+/* ===== CHECKBOX-TRIGGERED TRANSITIONS ===== */
+
+/* When login button is clicked (checkbox checked) */
+
+/* Hide login screen */
+#login-trigger:checked ~ .screen-login {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Show welcome screen - visible for 2.5s, then fades */
+@keyframes screen-welcome-anim {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  10% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  60% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  75% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+#login-trigger:checked ~ .screen-welcome {
+  animation: screen-welcome-anim 5s ease forwards;
+}
+
+/* Show logo-3 screen - appears after welcome, visible briefly */
+@keyframes screen-logo-3-anim {
+  0%,
+  65% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  75% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+#login-trigger:checked ~ .screen-logo-3 {
+  animation: screen-logo-3-anim 5s ease forwards;
+}
+
+/* Show dashboard - appears last and stays */
+@keyframes screen-dashboard-anim {
+  0%,
+  90% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+#login-trigger:checked ~ .screen-dashboard {
+  animation: screen-dashboard-anim 5s ease forwards;
+  z-index: 1;
+}
+
+/* ===== LOGIN CARD STYLES ===== */
+.login-card {
+  background: var(--color-white, #ffffff);
+  border-radius: 24px;
+  padding: 48px 64px;
+  width: 90%;
+  max-width: 480px;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.login-logo {
+  width: 80px;
+  height: auto;
+  margin: 0 auto 8px;
+}
+
+.login-brand {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6b7280;
+  letter-spacing: 0.3em;
+  margin-bottom: 24px;
+}
+
+.login-card h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.login-subtitle {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-bottom: 32px;
+}
+
+.login-form {
+  text-align: left;
+}
+
+.login-form > label:not(.login-btn-wrapper) {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  transition: all 0.15s ease;
+  background: #ffffff;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+  border-color: #ff6b1a;
+  box-shadow: 0 0 0 3px rgba(255, 107, 26, 0.1);
+  outline: none;
+}
+
+.login-btn-wrapper {
+  display: block;
+  margin-top: 24px;
+  cursor: pointer;
+}
+
+.login-btn {
+  display: block;
+  width: 100%;
+  padding: 16px 32px;
+  background: #ff6b1a;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 9999px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #e55a0a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+}
+
+.login-help {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 32px;
+  text-align: center;
+}
+
+/* ===== WELCOME CARD STYLES ===== */
+.welcome-card {
+  background: var(--color-white, #ffffff);
+  border-radius: 24px;
+  padding: 48px 64px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.welcome-logo {
+  width: 70px;
+  height: auto;
+  margin: 0 auto 8px;
+}
+
+.welcome-brand {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7280;
+  letter-spacing: 0.3em;
+  margin-bottom: 24px;
+}
+
+.welcome-card h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 24px;
+}
+
+.welcome-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 16px;
+  border: 3px solid #f3f4f6;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.welcome-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.welcome-card p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* ===== FADE ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  .login-card,
+  .welcome-card {
+    padding: 32px 24px;
+    margin: 16px;
+    width: calc(100% - 32px);
+  }
+
+  .login-card h1 {
+    font-size: 1.25rem;
+  }
+
+  .logo-centered {
+    width: 80px;
+  }
+}
