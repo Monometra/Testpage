@@ -1,22 +1,36 @@
 table {
     border: 2px solid #4b5563;
+    border-radius: 10px 10px ;
     width: 600px;
     display: grid;
     overflow-x: auto;
     justify-self: center;
     justify-items: center;
-    padding-top: 10px;
     box-shadow: 5px 5px 2px;
     background-color: #ebebeb;
+    border-spacing: 0px;
 }
 
+.tabla th:nth-child(1), .tabla td:nth-child(1){
+    background-color: rgb(243, 151, 90);
+    color: white;
+}
 
+.tabla th:nth-child(2), .tabla td:nth-child(2){
+    background-color:  #f3f3f3;
+    color: black;
+}
+
+.tabla th:nth-child(3), .tabla td:nth-child(3){
+    background-color: rgb(243, 151, 90);
+    color: white;
+}
 
 .planes {
-    border: 2px solid #4b5563;
     font-size: xx-large;
     background-color: #ff6b1a;
     box-shadow: 5px 5px 6px;
+    color: white;
 }
 
 .precio p {
@@ -41,15 +55,6 @@ table {
 
 .nav-logo {
     justify-self: center;
-}
-
-.cuadro-basico {
-    border: 2px solid grey;
-}
-
-td {
-    border-left: 3px dashed black;
-    border-right: 3px dashed black;
 }
 
 .dashboard-wrapper {
