@@ -1158,4 +1158,14 @@ table {
     .notifications-dropdown {
       max-height: 50vh;
       max-height: 50dvh;
-    }
+    }}
+
+
+.plan--basico, .plan--premium {
+  border-bottom: #f7d7c8 solid;
+}
+
+.plan--pro {
+  border-bottom: orange  solid;
+}
+    
